@@ -1,0 +1,67 @@
+// rem = 10px chrome 12px
+$rem = 62.5%
+
+// colors
+
+if hexo-config("main_color") == "default"
+  $color-main = #ebc65a
+else if hexo-config("main_color") == "forest"
+  $color-main = #6ba8a9
+else if hexo-config("main_color") == "grass"
+  $color-main = #9dab86
+else if hexo-config("main_color") == "sky"
+  $color-main = #9be3de
+else if hexo-config("main_color") == "sun"
+  $color-main = #ffa259
+else if hexo-config("main_color") == "sea"
+  $color-main = #46b3e6
+
+$color-auxiliary = lighten($color-main, 85%)
+
+$color-black = #222222
+$color-black-2 = #333333
+$color-black-3 = #444444
+$color-gray = #929292
+$color-light-gray = #cccccc
+$color-white = #ffffff
+
+// text
+// font-size - 放大1.5倍
+$font-size-s-0 = 1.8rem    // 原1.2rem
+$font-size-s-1 = 2.1rem    // 原1.4rem
+$font-size-s-2 = 2.4rem    // 原1.6rem
+$font-size-s-3 = 2.7rem    // 原1.8rem
+
+$font-size-m-1 = 3.3rem    // 原2.2rem
+$font-size-m-2 = 4.2rem    // 原2.8rem
+$font-size-m-3 = 5.1rem    // 原3.4rem
+$font-size-m-4 = 6.3rem    // 原4.2rem
+
+$font-size-l-1 = 7.8rem    // 原5.2rem
+$font-size-l-2 = 9.6rem    // 原6.4rem
+$font-size-l-3 = 11.7rem   // 原7.8rem
+
+// line-height - 放大1.5倍
+$line-height-s-1 = 3.3rem  // 原2.2rem
+$line-height-s-2 = 3.6rem  // 原2.4rem
+$line-height-s-3 = 3.9rem  // 原2.6rem
+
+$line-height-m-1 = 4.5rem  // 原3.0rem
+$line-height-m-2 = 5.4rem  // 原3.6rem
+$line-height-m-3 = 6.6rem  // 原4.4rem
+$line-height-m-4 = 8.4rem  // 原5.6rem
+
+$line-height-l-1 = 9.9rem  // 原6.6rem
+$line-height-l-2 = 12.3rem // 原8.2rem
+$line-height-l-3 = 15.0rem // 原10rem
+
+// font-family
+$font-family = "Noto Serif SC","SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif
+
+// screen
+$XXL = 1580px
+$XL = 1280px
+$L = 1080px
+$M = 780px
+$S = 580px
+$XS = 380px

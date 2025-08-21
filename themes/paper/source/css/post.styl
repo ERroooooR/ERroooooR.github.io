@@ -1,0 +1,134 @@
+
+.post-view__article
+  padding: 0rem 2rem 6rem 2rem
+  overflow-x: hidden
+
+article.post-view__article
+  .article__content
+    h1,h2,h3,h4,h5,h6,p
+      margin: 1.2em 0  // 增加标题和段落的垂直间距
+      line-height: 1.7  // 增加标题行高
+    h1,h2
+      text-size(m-3)
+      line-height: 1.6  // 增加大标题行高
+    h3
+      text-size(m-2)
+      line-height: 1.6
+    h4,h5
+      text-size(m-1)
+      line-height: 1.6
+    h6
+      text-size(s-3)
+      line-height: 1.6
+    p,li,ol,table,code
+      text-size(s-1)
+      line-height: 1.8  // 增加正文行高
+    small
+      font-size: 1.2rem  // 稍微增大small标签字体
+    a
+      box-shadow: inset 0 -0.1em 0 $color-black-2
+      transition:all .3s cubic-bezier(.71,0,0,.99)
+      text-decoration: none
+      &:hover
+        box-shadow: inset 0 -0.8em 0 $color-main
+
+    blockquote
+      border-left: 2px solid $color-black-2
+      padding: 0em 2rem
+      font-size: 1.1em  // 增大引用块字体
+      line-height: 1.8  // 增加引用块行高
+
+    .gutter
+      width: 3em
+      text-align: center
+      background: #f8f8f8
+      border-right: 1px solid $color-light-gray !important
+
+    code.hljs
+      text-size(s-1)
+      width: 100%
+      overflow-x: scroll
+      max-width: 80rem
+      padding: 0.8em 1.2em  // 增加代码块内边距
+      margin: 1.2em 0  // 增加代码块外边距
+      line-height: 1.6  // 增加代码行高
+      font-size: 0.95em  // 稍微增大代码字体
+
+    table
+      code.hljs
+        margin: 0
+
+    code:not(.hljs)
+      text-size(s-1)
+      color: $color-black-2
+      font-weight: bold
+      border: 1px solid $color-main
+      background: $color-white
+      box-shadow: .2em .2em 0 0 $color-main
+      padding: 0.2em 0.6em  // 增加内联代码内边距
+      margin: 0 0.4em
+      vertical-align: bottom
+      font-size: 0.95em  // 稍微增大内联代码字体
+
+    ul,ol
+      text-size(s-2)
+      padding-left: 2em
+      li
+        padding: 0.4em 0  // 增加列表项间距
+        line-height: 1.8  // 增加列表行高
+
+    img
+      width: auto
+      max-width: 100%
+      margin: 2.5rem 0  // 增加图片外边距
+
+    .highlight
+      table
+        width: 100%
+        border: none
+        table-layout: fixed
+        overflow: auto
+        border
+        th,td
+          border: none
+          padding: 0
+
+    table
+      margin: 2.5rem 0  // 增加表格外边距
+      border-spacing: 0
+      border-collapse: collapse
+      border-top: 2px $color-black-2 solid
+      border-bottom: 2px $color-black-2 solid
+      th,td
+        border: 1px $color-light-gray solid
+        padding: 0.5em 1.2em  // 增加表格单元格内边距
+        line-height: 1.7  // 增加表格行高
+        font-size: 0.95em  // 稍微增大表格字体
+      th
+        border-bottom: 2px $color-black-2 solid
+        font-size: 1em  // 表头字体稍微大一点
+      td:last-child,th:last-child
+        border-right: none
+      td:first-child,th:first-child
+        border-left: none
+
+    // latex
+    .mjx-chtml
+      font-size: $font-size-s-2;
+
+@media screen and (max-width: $M)
+  .post-view
+    font-size: 17px  // 中等屏幕下稍微减小字体
+  .post-view__article
+    padding: 0rem 1.5rem 5rem 1.5rem  // 调整中等屏幕下的内边距
+    .article__content
+      .mjx-chtml
+        font-size: $font-size-s-1;
+
+@media screen and (max-width: $S)
+  .post-view
+    font-size: 16px  // 小屏幕下使用默认字体大小
+  article.post-view__article
+    .article__content
+      .mjx-chtml
+        font-size: $font-size-s-0;
